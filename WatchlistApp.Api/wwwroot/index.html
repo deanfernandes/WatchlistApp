@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Watchlist</title>
+    <link rel="stylesheet" href="/css/site.css" />
+    <link rel="icon" type="image/png" href="/assets/images/favicon.ico">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="ml-3">
+    <h1 class="text-center text-uppercase">Watchlist</h1>
+
+    <h2>Add</h2>
+    <form action="javascript:void(0);" onsubmit="addMovie()">
+        <input type="text" id="titleInput" placeholder="Movie title">
+        <select id="genreSelectAdd">
+        </select>
+        <input type="submit" value="Add">
+    </form>
+
+    <div id="editForm">
+        <h2>Edit</h2>
+        <form action="javascript:void(0);" onsubmit="updateMovie()">
+            <input type="hidden" id="edit-id">
+            <input type="text" id="edit-title">
+            <select id="edit-genre">
+            </select>
+            <input type="checkbox" id="edit-watched">
+            <input type="submit" value="Save">
+            <a onclick="hideEditMovie()" title="Close" class="clickable">&#10006;</a>
+        </form>
+    </div>
+
+    <h2>Movies</h2>
+    <select id="genreSelect">
+        <option value="All" selected="selected">All</option>
+    </select>
+    <label for="unwatchedOnlyInput">Unwatched only</label>
+    <input type="checkbox" id="unwatchedOnlyInput" />
+    <label for="searchInput">Search:</label>
+    <input type="text" id="searchInput" placeholder="Search movies..." oninput="_displayMovies()">
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Genre</th>
+                <th>Watched?</th>
+            </tr>
+        </thead>
+        <tbody id="moviesTableBody">
+        </tbody>
+    </table>
+
+    <script src="/js/site.js"></script>
+    <script>
+            fetchMovies();
+            fetchGenres();
+    </script>
+</body>
+</html>

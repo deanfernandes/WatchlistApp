@@ -1,0 +1,17 @@
+﻿table {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid;
+    padding: 10px;
+}
+
+#editForm {
+    display: none;
+}
+
+.clickable {
+    cursor: pointer;
+}

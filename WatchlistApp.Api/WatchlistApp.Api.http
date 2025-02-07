@@ -1,0 +1,47 @@
+@WatchlistApp.Api_HostAddress = https://localhost:7152
+
+GET {{WatchlistApp.Api_HostAddress}}/api/movies
+
+###
+
+POST {{WatchlistApp.Api_HostAddress}}/api/movies
+Content-Type: application/json
+
+  {
+    "title": "one piece"
+  }
+
+###
+
+@id=12
+GET {{WatchlistApp.Api_HostAddress}}/api/movies/{{id}}
+
+###
+
+PUT {{WatchlistApp.Api_HostAddress}}/api/movies/{{id}}
+Content-Type: application/json
+
+{
+  "watched": true
+}
+
+###
+
+DELETE {{WatchlistApp.Api_HostAddress}}/api/movies/{{id}}
+
+###
+@genre=2
+GET {{WatchlistApp.Api_HostAddress}}/api/movies?genre={{genre}}
+
+###
+
+GET {{WatchlistApp.Api_HostAddress}}/api/genres
+
+###
+
+###
+@genre=2
+@watched=true
+GET {{WatchlistApp.Api_HostAddress}}/api/movies?watched={{watched}}
+
+###
