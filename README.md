@@ -5,7 +5,7 @@ Personal Web project
 - ASP.NET
 - .NET 9
 - Backend (Controller based API, RESTful, Swagger/OpenAPI documentation)
-- Frontend/UI (HTML, CSS + Boostrap, Vanilla JavaScript)
+- Frontend/UI (HTML, CSS + Boostrap, vanilla JavaScript)
 - Search filter (Regex)
 - Genre filter (LINQ)
 - Relational Database (SQL Server)
