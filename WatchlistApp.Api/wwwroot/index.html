@@ -35,8 +35,10 @@
     <select id="genreSelect">
         <option value="All" selected="selected">All</option>
     </select>
+    <br />
     <label for="unwatchedOnlyInput">Unwatched only</label>
     <input type="checkbox" id="unwatchedOnlyInput" />
+    <br />
     <label for="searchInput">Search:</label>
     <input type="text" id="searchInput" placeholder="Search movies..." oninput="_displayMovies()">
     <table>
@@ -53,8 +55,8 @@
 
     <script src="/js/site.js"></script>
     <script>
-            fetchMovies();
-            fetchGenres();
+        fetchMovies();
+        fetchGenres();
     </script>
 </body>
 </html>
