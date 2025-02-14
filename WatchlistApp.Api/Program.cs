@@ -13,6 +13,17 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddDbContext<MovieDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowLocalhost",
+        policy =>
+        {
+            policy.WithOrigins("https://localhost:7151") // .Web csproj
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -35,6 +46,8 @@ app.MapControllers();
 SeedDatabase(app);
 
 app.UseStaticFiles();
+
+app.UseCors("AllowLocalhost");
 
 app.Run();
 void SeedDatabase(IHost app)

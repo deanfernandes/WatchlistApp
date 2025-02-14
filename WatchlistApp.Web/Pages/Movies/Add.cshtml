@@ -1,0 +1,25 @@
+﻿@page
+@model AddModel
+@{
+    ViewData["Title"] = "Add Movie";
+}
+
+<div>
+    <h1>@ViewData["Title"]</h1>
+
+    <form method="post">
+        <div class="mb-3">
+            <label for="Title" class="form-label">Title</label>
+            <input type="text" class="form-control w-25" id="Title" asp-for="Movie.Title" />
+        </div>
+
+        <div class="mb-3">
+            <label for="Genre" class="form-label">Genre</label>
+            <select class="form-select w-25" id="genre" asp-for="Movie.Genre" asp-items="Model.GenreList" required>
+
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add Movie</button>
+    </form>
+</div>

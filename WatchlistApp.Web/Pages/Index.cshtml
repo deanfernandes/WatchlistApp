@@ -1,0 +1,29 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Movies";
+}
+
+<div>
+    <h1>@ViewData["Title"]</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Genre</th>
+                <th>Watched?</th>
+            </tr>
+        </thead>
+        <tbody id="moviesTableBody">
+
+        </tbody>
+    </table>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+<script>
+    fetchMovies();
+</script>

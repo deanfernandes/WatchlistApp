@@ -1,0 +1,32 @@
+﻿@page
+@model WatchlistApp.Web.Pages.Movies.EditModel
+@{
+    ViewData["Title"] = "Edit Movie";
+}
+
+<div>
+    <h1>@ViewData["Title"]</h1>
+
+    <form method="post">
+        <input type="hidden" asp-for="Movie.Id" />
+        <div class="mb-3">
+            <label class="form-label">Title</label>
+            <input class="form-control w-25" asp-for="Movie.Title" required />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Genre</label>
+            <select id="genre" asp-for="Movie.Genre" asp-items="Model.GenreList" class="form-select w-25" required>
+
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Watched</label>
+            <input type="checkbox" asp-for="Movie.Watched" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+        <a asp-page="/Index" class="btn btn-secondary">Cancel</a>
+    </form>
+</div>

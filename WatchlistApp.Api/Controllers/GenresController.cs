@@ -20,6 +20,7 @@ namespace WatchlistApp.Api.Controllers
     {
         Action,
         Comedy,
-        Horror
+        Horror,
+        Animation
     }
 }

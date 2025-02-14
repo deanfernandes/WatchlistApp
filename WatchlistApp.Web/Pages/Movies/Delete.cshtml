@@ -1,0 +1,24 @@
+﻿@page
+@model WatchlistApp.Web.Pages.Movies.DeleteModel
+@{
+    ViewData["Title"] = "Delete Movie";
+}
+
+<div>
+    <h1>@ViewData["Title"]</h1>
+
+    @if (Model.DeleteSuccess)
+    {
+        <p>Movie deleted successfully.</p>
+    }
+    else
+    {
+        <p>Are you sure you want to delete movie: <b>@Model.Movie.Title?</b></p>
+
+        <form method="post">
+            <button type="submit" class="btn btn-danger">Yes</button>
+            <a href="/Index" class="btn btn-secondary">No</a>
+        </form>
+    }
+</div>
+
