@@ -11,4 +11,8 @@ Personal Web project
 - Relational Database (SQL Server)
 - ORM (Entity Framework Core, Migrations, Code-First)
 
+## Screenshot (Static Web UI):
 ![screenshot](screenshot.png)
+
+## YouTube Demo (Razor Pages Web App + jQuery + Bootstrap):
+[![Watch the video](https://img.youtube.com/vi/xNLCBtunQLE/0.jpg)](https://www.youtube.com/watch?v=xNLCBtunQLE)
