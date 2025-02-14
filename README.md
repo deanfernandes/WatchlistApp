@@ -15,4 +15,6 @@ Personal Web project
 ![screenshot](screenshot.png)
 
 ## YouTube Demo (Razor Pages Web App + jQuery + Bootstrap):
+*Uses .Api proj and VS Multiple startup
+
 [![Watch the video](https://img.youtube.com/vi/xNLCBtunQLE/0.jpg)](https://www.youtube.com/watch?v=xNLCBtunQLE)
